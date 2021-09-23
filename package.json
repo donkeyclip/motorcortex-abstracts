@@ -92,7 +92,7 @@
     "babel-loader": "8.2.2",
     "babel-preset-es2015-node5": "1.2.0",
     "browserslist": "4.17.1",
-    "caniuse-lite": "1.0.30001259",
+    "caniuse-lite": "1.0.30001260",
     "commitizen": "4.2.4",
     "concurrently": "6.2.1",
     "coveralls": "3.1.1",
