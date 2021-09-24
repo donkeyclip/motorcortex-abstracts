@@ -1,5 +1,5 @@
-import { loadPlugin, HTMLClip } from "@kissmybutton/motorcortex";
-import AnimeDefinition from "@kissmybutton/motorcortex-anime";
+import { loadPlugin, HTMLClip } from "@donkeyclip/motorcortex";
+import AnimeDefinition from "@donkeyclip/motorcortex-anime";
 
 const Anime = loadPlugin(AnimeDefinition);
 
