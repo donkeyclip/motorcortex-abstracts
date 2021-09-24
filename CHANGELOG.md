@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.2](https://www.github.com/donkeyclip/motorcortex-abstracts/compare/v1.0.1...v1.0.2) (2021-09-24)
+
+
+### Bug Fixes
+
+* update npm name ([f08bfe4](https://www.github.com/donkeyclip/motorcortex-abstracts/commit/f08bfe458c52fcf724be49ec01977fb8e9ca4896))
+
 ### [1.0.1](https://www.github.com/kissmybutton/motorcortex-abstracts/compare/v1.0.0...v1.0.1) (2021-04-02)
 
 
