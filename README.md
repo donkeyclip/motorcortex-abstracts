@@ -2,21 +2,21 @@
 
 ## Demo
 
-[Check it out here](https://kissmybutton.github.io/motorcortex-abstracts/demo/index.html)
+[Check it out here](https://donkeyclip.github.io/motorcortex-abstracts/demo/index.html)
 
 ## Installation
 
 ```bash
-$ npm install --save @kissmybutton/motorcortex-abstracts
+$ npm install --save @donkeyclip/motorcortex-abstracts
 # OR
-$ yarn add @kissmybutton/motorcortex-abstracts
+$ yarn add @donkeyclip/motorcortex-abstracts
 ```
 
 ## Loading
 
 ```javascript
-import { loadPlugin } from "@kissmybutton/motorcortex";
-import AbstractsDefinition from "@kissmybutton/motorcortex-abstracts";
+import { loadPlugin } from "@donkeyclip/motorcortex";
+import AbstractsDefinition from "@donkeyclip/motorcortex-abstracts";
 const Plugin = loadPlugin(AbstractsDefinition);
 ```
 
