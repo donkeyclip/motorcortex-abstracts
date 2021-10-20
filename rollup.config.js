@@ -29,10 +29,10 @@ export default [
     ],
     plugins: [
       nodeResolve({ mainFields: ["module", "main", "browser"] }),
+      json(),
       commonjs(),
       babel(),
       terser(),
-      json(),
     ],
   },
 ];
