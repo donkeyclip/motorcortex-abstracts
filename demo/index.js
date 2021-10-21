@@ -1,6 +1,6 @@
 import { HTMLClip, loadPlugin } from "@donkeyclip/motorcortex";
 import Player from "@donkeyclip/motorcortex-player";
-import AbstractsDefinition from "../dist/motorcortex-abstracts.umd";
+import AbstractsDefinition from "../dist/motorcortex-abstracts.esm";
 
 const Plugin = loadPlugin(AbstractsDefinition);
 
