@@ -296,3 +296,9 @@ const CrossRowReveal = new Plugin.CrossRowReveal(
 | color          |                      color of the crosses                      | hex,rgb or color name |
 | reverse        | if crosses will be revealed from left to right or the opposite |               boolean |
 | timing         |                  incident duration multiplier                  |                   num |
+
+## License
+
+[MIT License](https://opensource.org/licenses/MIT)
+
+[<img src="https://presskit.donkeyclip.com/logos/donkey%20clip%20logo.svg" width=250></img>](https://donkeyclip.com)
