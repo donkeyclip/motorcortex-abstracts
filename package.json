@@ -5,10 +5,10 @@
   "main": "dist/motorcortex-abstracts.cjs.js",
   "module": "dist/motorcortex-abstracts.esm.js",
   "browser": "dist/motorcortex-abstracts.umd.js",
-  "author": "KissMyButton PC (kissmybutton.gr) <opensource@kissmybutton.gr>",
+  "author": "Copyright 2021 Donkeyclip (donkeyclip.com) <opensource@donkeyclip.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kissmybutton/motorcortex-abstracts.git"
+    "url": "https://github.com/donkeyclip/motorcortex-abstracts.git"
   },
   "license": "MIT",
   "engines": {
