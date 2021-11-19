@@ -1,7 +1,4 @@
-import { loadPlugin, HTMLClip } from "@donkeyclip/motorcortex";
-import AnimeDefinition from "@donkeyclip/motorcortex-anime";
-
-const Anime = loadPlugin(AnimeDefinition);
+import { CSSEffect, HTMLClip } from "@donkeyclip/motorcortex";
 
 export default class CrossRandom extends HTMLClip {
   get font() {
@@ -86,7 +83,7 @@ export default class CrossRandom extends HTMLClip {
     const shuffledArray = shuffle(indexArray);
 
     shuffledArray.map((index, i) => {
-      const crossScale = new Anime.Anime(
+      const crossScale = new CSSEffect(
         {
           animatedAttrs: {
             opacity: 1,

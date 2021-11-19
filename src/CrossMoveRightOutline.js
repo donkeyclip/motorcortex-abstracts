@@ -1,8 +1,4 @@
-import { loadPlugin, HTMLClip } from "@donkeyclip/motorcortex";
-import AnimeDefinition from "@donkeyclip/motorcortex-anime";
-
-const Anime = loadPlugin(AnimeDefinition);
-
+import { HTMLClip, CSSEffect } from "@donkeyclip/motorcortex";
 export default class CrossMoveRightOutline extends HTMLClip {
   get font() {
     return [
@@ -54,7 +50,7 @@ export default class CrossMoveRightOutline extends HTMLClip {
 
   buildTree() {
     for (let i = 0; i <= this.attrs.steps; i++) {
-      const crossOpacityOn = new Anime.Anime(
+      const crossOpacityOn = new CSSEffect(
         {
           animatedAttrs: {
             opacity: 1,
@@ -71,7 +67,7 @@ export default class CrossMoveRightOutline extends HTMLClip {
 
       this.addIncident(crossOpacityOn, 500 * i + 1);
 
-      const crossOpacityOff = new Anime.Anime(
+      const crossOpacityOff = new CSSEffect(
         {
           animatedAttrs: {
             opacity: 0,

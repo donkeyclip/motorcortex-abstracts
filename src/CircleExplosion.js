@@ -1,7 +1,4 @@
-import { loadPlugin, HTMLClip } from "@donkeyclip/motorcortex";
-import AnimeDefinition from "@donkeyclip/motorcortex-anime";
-
-const Anime = loadPlugin(AnimeDefinition);
+import { HTMLClip, CSSEffect } from "@donkeyclip/motorcortex";
 
 export default class CircleExplosion extends HTMLClip {
   get font() {
@@ -65,7 +62,7 @@ export default class CircleExplosion extends HTMLClip {
 
   buildTree() {
     for (let i = 0; i < this.attrs.items; i++) {
-      const circleTop = new Anime.Anime(
+      const circleTop = new CSSEffect(
         {
           animatedAttrs: {
             transform: {
@@ -81,7 +78,7 @@ export default class CircleExplosion extends HTMLClip {
 
       this.addIncident(circleTop, 0);
 
-      const circleWidthUp = new Anime.Anime(
+      const circleWidthUp = new CSSEffect(
         {
           animatedAttrs: {
             width: `${
@@ -112,7 +109,7 @@ export default class CircleExplosion extends HTMLClip {
 
       this.addIncident(circleWidthUp, 0);
 
-      const circleWidthDown = new Anime.Anime(
+      const circleWidthDown = new CSSEffect(
         {
           animatedAttrs: {
             width: `${
