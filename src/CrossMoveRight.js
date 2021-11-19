@@ -1,7 +1,4 @@
-import { loadPlugin, HTMLClip } from "@donkeyclip/motorcortex";
-import AnimeDefinition from "@donkeyclip/motorcortex-anime";
-
-const Anime = loadPlugin(AnimeDefinition);
+import { HTMLClip, CSSEffect } from "@donkeyclip/motorcortex";
 
 export default class CrossMoveRight extends HTMLClip {
   get font() {
@@ -74,7 +71,7 @@ export default class CrossMoveRight extends HTMLClip {
 
   buildTree() {
     for (let i = 1; i <= this.attrs.items; i++) {
-      const crossScale = new Anime.Anime(
+      const crossScale = new CSSEffect(
         {
           animatedAttrs: {
             transform: {
@@ -99,7 +96,7 @@ export default class CrossMoveRight extends HTMLClip {
 
       const lastEnd = 250 * this.attrs.items + 250 * i;
       const left = this.attrs.crossSize * (i + 1);
-      const crossLeft = new Anime.Anime(
+      const crossLeft = new CSSEffect(
         {
           animatedAttrs: {
             left: `${this.attrs.travelDistance - left}px`,

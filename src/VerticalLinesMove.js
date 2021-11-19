@@ -1,7 +1,4 @@
-import { loadPlugin, HTMLClip } from "@donkeyclip/motorcortex";
-import AnimeDefinition from "@donkeyclip/motorcortex-anime";
-
-const Anime = loadPlugin(AnimeDefinition);
+import { CSSEffect, HTMLClip } from "@donkeyclip/motorcortex";
 
 export default class VerticalLinesMove extends HTMLClip {
   get font() {
@@ -58,7 +55,7 @@ export default class VerticalLinesMove extends HTMLClip {
 
   buildTree() {
     for (let i = 0; i <= 3; i++) {
-      const lineTop = new Anime.Anime(
+      const lineTop = new CSSEffect(
         {
           animatedAttrs: {
             height: `${this.attrs.height * 0.6}px`,
@@ -75,7 +72,7 @@ export default class VerticalLinesMove extends HTMLClip {
         }
       );
       this.addIncident(lineTop, 500 * i + 1);
-      const lineHeigth = new Anime.Anime(
+      const lineHeigth = new CSSEffect(
         {
           animatedAttrs: {
             height: `0px`,

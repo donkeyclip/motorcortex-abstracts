@@ -1,7 +1,4 @@
-import { loadPlugin, HTMLClip } from "@donkeyclip/motorcortex";
-import AnimeDefinition from "@donkeyclip/motorcortex-anime";
-
-const Anime = loadPlugin(AnimeDefinition);
+import { CSSEffect, HTMLClip } from "@donkeyclip/motorcortex";
 
 export default class CrossRowReveal extends HTMLClip {
   get font() {
@@ -73,7 +70,7 @@ export default class CrossRowReveal extends HTMLClip {
     for (let i = 0; i < this.attrs.items; i++) {
       const select = this.attrs.reverse === true ? this.attrs.items - i - 1 : i;
 
-      const reveal = new Anime.Anime(
+      const reveal = new CSSEffect(
         {
           animatedAttrs: {
             opacity: 1,
@@ -92,7 +89,7 @@ export default class CrossRowReveal extends HTMLClip {
       this.addIncident(reveal, 200 * i * (this.attrs.timing || 1));
     }
 
-    const crossTop = new Anime.Anime(
+    const crossTop = new CSSEffect(
       {
         animatedAttrs: {
           top: "0px",

@@ -1,7 +1,4 @@
-import { loadPlugin, HTMLClip } from "@donkeyclip/motorcortex";
-import AnimeDefinition from "@donkeyclip/motorcortex-anime";
-
-const Anime = loadPlugin(AnimeDefinition);
+import { CSSEffect, HTMLClip } from "@donkeyclip/motorcortex";
 
 export default class Dots extends HTMLClip {
   get font() {
@@ -53,7 +50,7 @@ export default class Dots extends HTMLClip {
   }
 
   buildTree() {
-    const dotsOpacity = new Anime.Anime(
+    const dotsOpacity = new CSSEffect(
       {
         animatedAttrs: {
           opacity: 1,
