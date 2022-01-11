@@ -301,4 +301,4 @@ const CrossRowReveal = new Plugin.CrossRowReveal(
 
 [MIT License](https://opensource.org/licenses/MIT)
 
-[<img src="https://presskit.donkeyclip.com/logos/donkey%20clip%20logo.svg" width=250></img>](https://donkeyclip.com)
+[<img src="https://presskit.donkeyclip.com/logos/donkey%20clip%20logo.png" width=250></img>](https://donkeyclip.com)
