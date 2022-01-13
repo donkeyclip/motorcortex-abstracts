@@ -1,8 +1,47 @@
-# motorcortex-abstracts
+# MotorCortex-Abstracts
+
+**Table of Contents**
+
+- [MotorMortex-Abstracts](#motorcortex-abstracts)
+  - [Demo](#demo)
+- [Intro / Features](#intro--features)
+- [Getting Started](#getting-started)
+  - [Installation](#installation)
+  - [Importing and Loading](#importing-and-loading)
+- [Creating Incidents](#creating-incidents)
+  - [CrossMoveRight](#crossmoveright)
+  - [CrossMoveRightOutline](#crossmoverightoutline)
+  - [CrossRandom](#crossrandom)
+  - [CrossRowReveal](#crossrowreveal)
+  - [VerticalLinesMove](#verticallinesmove)
+  - [HorizontalLinesMove](#horizontallinesmove)
+  - [CircleExplosion](#circleexplosion)
+  - [CircleBubbleUp](#circlebubbleup)
+  - [Dots](#dots)
+- [Contributing](#contributing)
+- [License](#license)
+- [Sponsored by](#sponsored-by)
 
 ## Demo
 
 [Check it out here](https://donkeyclip.github.io/motorcortex-abstracts/demo/index.html)
+
+# Intro / Features
+
+MotorCortex-Abstracts helps you add cross, line, circle, dot and bubble effects in your clip in an easy way.
+
+This Plugin exposes nine Incidents:
+- CrossMoveRight
+- CrossMoveRightOutline
+- CrossRandom
+- CrossRowReveal
+- VerticalLinesMove
+- HorizontalLinesMove
+- CircleExplosion
+- CircleBubbleUp
+- Dots
+
+# Getting Started
 
 ## Installation
 
@@ -12,7 +51,7 @@ $ npm install --save @donkeyclip/motorcortex-abstracts
 $ yarn add @donkeyclip/motorcortex-abstracts
 ```
 
-## Loading
+## Importing and Loading
 
 ```javascript
 import { loadPlugin } from "@donkeyclip/motorcortex";
@@ -20,7 +59,7 @@ import AbstractsDefinition from "@donkeyclip/motorcortex-abstracts";
 const Plugin = loadPlugin(AbstractsDefinition);
 ```
 
-# Create incident
+# Creating Incidents
 
 ## CrossMoveRight
 
@@ -113,6 +152,38 @@ const CrossRandom = new Plugin.CrossRandom(
 | rows           | how many rows of cross will be |                   num |
 | timing         |  incident duration multiplier  |                   num |
 
+## CrossRowReveal
+
+```javascript
+const CrossRowReveal = new Plugin.CrossRowReveal(
+  {
+    width: 425,
+    crossSize: 30,
+    crossThickness: 5,
+    items: 8,
+    color: "#8300ff",
+    reverse: false,
+    timing: 1,
+  },
+  {
+    selector: ".container9",
+  }
+);
+```
+
+### CrossRowReveal Attrs
+
+| Name           |                              Are                               |                Values |
+| -------------- | :------------------------------------------------------------: | --------------------: |
+| width          |                       width of incident                        |                   num |
+| height         |                       height of incident                       |                   num |
+| crossSize      |                   height and width of cross                    |                   num |
+| crossThickness |                      cross line thickness                      |                   num |
+| items          |            how many crosses will be in an incident             |                   num |
+| color          |                      color of the crosses                      | hex,rgb or color name |
+| reverse        | if crosses will be revealed from left to right or the opposite |               boolean |
+| timing         |                  incident duration multiplier                  |                   num |
+
 ## VerticalLinesMove
 
 ```javascript
@@ -130,6 +201,31 @@ const VerticalLinesMove = new Plugin.VerticalLinesMove(
 ```
 
 ### VerticalLinesMove Attrs
+
+| Name         |             Are             |                Values |
+| ------------ | :-------------------------: | --------------------: |
+| width        |      width of incident      |                   num |
+| height       |     height of incident      |                   num |
+| maxLineWidth | the maximum width of a line |                   num |
+| color        |    color of the crosses     | hex,rgb or color name |
+
+## HorizontalLinesMove
+
+```javascript
+const HorizontalLinesMove = new Plugin.HorizontalLinesMove(
+  {
+    width: 425,
+    height: 240,
+    maxLineHeight: 50,
+    color: "#8300ff",
+  },
+  {
+    selector: ".container7",
+  }
+);
+```
+
+### HorizontalLinesMove Attrs
 
 | Name         |             Are             |                Values |
 | ------------ | :-------------------------: | --------------------: |
@@ -204,31 +300,6 @@ const CircleBubbleUp = new Plugin.CircleBubbleUp(
 | items          |   how many circles will be   |                   num |
 | border         |   if circle will be hollow   |               boolean |
 
-## HorizontalLinesMove
-
-```javascript
-const HorizontalLinesMove = new Plugin.HorizontalLinesMove(
-  {
-    width: 425,
-    height: 240,
-    maxLineHeight: 50,
-    color: "#8300ff",
-  },
-  {
-    selector: ".container7",
-  }
-);
-```
-
-### HorizontalLinesMove Attrs
-
-| Name         |             Are             |                Values |
-| ------------ | :-------------------------: | --------------------: |
-| width        |      width of incident      |                   num |
-| height       |     height of incident      |                   num |
-| maxLineWidth | the maximum width of a line |                   num |
-| color        |    color of the crosses     | hex,rgb or color name |
-
 ## Dots
 
 ```javascript
@@ -265,40 +336,19 @@ const Dots = new Plugin.Dots(
 | timing    |     incident duration multiplier     |                   num |
 | repeats   | how many times dots will be flashing |                   num |
 
-## CrossRowReveal
+# Contributing 
 
-```javascript
-const CrossRowReveal = new Plugin.CrossRowReveal(
-  {
-    width: 425,
-    crossSize: 30,
-    crossThickness: 5,
-    items: 8,
-    color: "#8300ff",
-    reverse: false,
-    timing: 1,
-  },
-  {
-    selector: ".container9",
-  }
-);
-```
+In general, we follow the "fork-and-pull" Git workflow, so if you want to submit patches and additions you should follow the next steps:
+1.	**Fork** the repo on GitHub
+2.	**Clone** the project to your own machine
+3.	**Commit** changes to your own branch
+4.	**Push** your work back up to your fork
+5.	Submit a **Pull request** so that we can review your changes
 
-### CrossRowReveal Attrs
 
-| Name           |                              Are                               |                Values |
-| -------------- | :------------------------------------------------------------: | --------------------: |
-| width          |                       width of incident                        |                   num |
-| height         |                       height of incident                       |                   num |
-| crossSize      |                   height and width of cross                    |                   num |
-| crossThickness |                      cross line thickness                      |                   num |
-| items          |            how many crosses will be in an incident             |                   num |
-| color          |                      color of the crosses                      | hex,rgb or color name |
-| reverse        | if crosses will be revealed from left to right or the opposite |               boolean |
-| timing         |                  incident duration multiplier                  |                   num |
-
-## License
+# License
 
 [MIT License](https://opensource.org/licenses/MIT)
 
-[<img src="https://presskit.donkeyclip.com/logos/donkey%20clip%20logo.png" width=250></img>](https://donkeyclip.com)
+# Sponsored by
+[<img src="https://presskit.donkeyclip.com/logos/donkey%20clip%20logo.svg" width=250></img>](https://donkeyclip.com)
