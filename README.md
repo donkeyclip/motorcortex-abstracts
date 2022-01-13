@@ -18,6 +18,7 @@
   - [CircleExplosion](#circleexplosion)
   - [CircleBubbleUp](#circlebubbleup)
   - [Dots](#dots)
+- [Adding Incidents in your clip](#adding-incidents-in-your-clip)
 - [Contributing](#contributing)
 - [License](#license)
 - [Sponsored by](#sponsored-by)
@@ -336,6 +337,12 @@ const Dots = new Plugin.Dots(
 | timing    |     incident duration multiplier     |                   num |
 | repeats   | how many times dots will be flashing |                   num |
 
+# Adding Incidents in your clip
+
+```javascript
+clipName.addIncident(incidentName,startTime);
+```
+
 # Contributing 
 
 In general, we follow the "fork-and-pull" Git workflow, so if you want to submit patches and additions you should follow the next steps:
@@ -344,7 +351,6 @@ In general, we follow the "fork-and-pull" Git workflow, so if you want to submit
 3.	**Commit** changes to your own branch
 4.	**Push** your work back up to your fork
 5.	Submit a **Pull request** so that we can review your changes
-
 
 # License
 
