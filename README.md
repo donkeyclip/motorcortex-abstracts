@@ -2,7 +2,7 @@
 
 **Table of Contents**
 
-- [MotorMortex-Abstracts](#motorcortex-abstracts)
+- [MotorCortex-Abstracts](#motorcortex-abstracts)
   - [Demo](#demo)
 - [Intro / Features](#intro--features)
 - [Getting Started](#getting-started)
