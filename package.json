@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "engines": {
-    "node": ">=8.3.2"
+    "node": ">=12"
   },
   "scripts": {
     "update-force:packages": "./node_modules/npm-check-updates/bin/ncu -u && npm i",
@@ -65,7 +65,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "@donkeyclip/motorcortex": ">= 7.6.0 < 8"
+    "@donkeyclip/motorcortex": ">= 8 < 9"
   },
   "devDependencies": {
     "@babel/cli": "7.16.8",
@@ -76,8 +76,8 @@
     "@babel/preset-env": "7.16.11",
     "@commitlint/cli": "16.1.0",
     "@commitlint/config-conventional": "16.0.0",
-    "@donkeyclip/motorcortex": "7.8.0",
-    "@donkeyclip/motorcortex-player": "2.5.0",
+    "@donkeyclip/motorcortex": "8.0.0",
+    "@donkeyclip/motorcortex-player": "2.5.2",
     "@rollup/plugin-babel": "5.3.0",
     "@rollup/plugin-commonjs": "21.0.1",
     "@rollup/plugin-json": "4.1.0",
