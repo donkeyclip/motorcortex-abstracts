@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.0](https://www.github.com/donkeyclip/motorcortex-abstracts/compare/v1.1.0...v1.2.0) (2022-03-17)
+
+
+### Features
+
+* declare mc 8 as compatible ([cc0a4df](https://www.github.com/donkeyclip/motorcortex-abstracts/commit/cc0a4dfc62199d9bcaa2200f0b3bfc3dc9b71338))
+
 ## [1.1.0](https://www.github.com/donkeyclip/motorcortex-abstracts/compare/v1.0.2...v1.1.0) (2021-11-19)
 
 
