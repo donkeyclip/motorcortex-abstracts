@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0](https://github.com/donkeyclip/motorcortex-abstracts/compare/v1.3.0...v1.4.0) (2022-04-07)
+
+
+### Features
+
+* drop explorer 11 support ([e80ffd5](https://github.com/donkeyclip/motorcortex-abstracts/commit/e80ffd58c44351260fd868c2c3d7c10549980de3))
+* update compatibility with motorcortex ([889bdcc](https://github.com/donkeyclip/motorcortex-abstracts/commit/889bdcc11bed562e1c1c7bf4227882aaaec91aae))
+
 ## [1.3.0](https://github.com/donkeyclip/motorcortex-abstracts/compare/v1.2.0...v1.3.0) (2022-03-22)
 
 
