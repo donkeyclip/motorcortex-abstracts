@@ -9,24 +9,20 @@ class CrossMoveRight extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     const crossList = [];
-
     for (let i = 1; i <= this.attrs.items; i++) {
       const left = i === 1 ? this.attrs.crossSize / 2 - this.attrs.crossThickness / 2 : this.attrs.crossSize * i;
       crossList.push(`<div style="left: ${left}px;" class="cross-wrapper-item cross-wrapper-item-${i}">
           <div class="cross cross-item-${i}"></div>
         </div>`);
     }
-
     return `
       <div class="wrapper">
         ${crossList.join("")}
   	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -63,7 +59,6 @@ class CrossMoveRight extends motorcortex.HTMLClip {
       }
     `;
   }
-
   buildTree() {
     for (let i = 1; i <= this.attrs.items; i++) {
       const crossScale = new motorcortex.CSSEffect({
@@ -101,7 +96,6 @@ class CrossMoveRight extends motorcortex.HTMLClip {
       this.addIncident(crossLeft, lastEnd);
     }
   }
-
 }
 
 class CrossMoveRightOutline extends motorcortex.HTMLClip {
@@ -111,23 +105,19 @@ class CrossMoveRightOutline extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     const crossList = [];
-
     for (let i = 0; i <= this.attrs.steps; i++) {
       crossList.push(`<svg class="cross-item cross-item-${i}" style="left:${this.attrs.travelDistance / this.attrs.steps * i}px;transform: rotate(${Math.floor(Math.random() * 361)}deg)" height="${this.attrs.crossSize}px" viewBox="0 0 512 512" width="${this.attrs.crossSize}px" xmlns="http://www.w3.org/2000/svg">
            <path d="m336 512h-160v-177h-176v-160h176v-175h160v175h176v160h-176zm-120-40h80v-177h176v-80h-176v-175h-80v175h-176v80h176zm0 0"/>
         </svg>`);
     }
-
     return `
       <div class="wrapper">
         ${crossList.join("")}
   	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -143,7 +133,6 @@ class CrossMoveRightOutline extends motorcortex.HTMLClip {
       }
     `;
   }
-
   buildTree() {
     for (let i = 0; i <= this.attrs.steps; i++) {
       const crossOpacityOn = new motorcortex.CSSEffect({
@@ -172,7 +161,6 @@ class CrossMoveRightOutline extends motorcortex.HTMLClip {
       this.addIncident(crossOpacityOff, 500 * i + 1 + 500);
     }
   }
-
 }
 
 class CrossRandom extends motorcortex.HTMLClip {
@@ -182,23 +170,19 @@ class CrossRandom extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     const crossList = [];
     this.array = [];
-
     for (let i = 0; i < this.attrs.items; i++) {
       this.array.push(0);
       crossList.push(` <div  class="cross cross-item-${i}"></div> `);
     }
-
     return `
       <div class="wrapper">
         ${crossList.join("")}
   	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -230,26 +214,24 @@ class CrossRandom extends motorcortex.HTMLClip {
       }
     `;
   }
-
   buildTree() {
     const shuffle = array => {
       let currentIndex = array.length,
-          temporaryValue,
-          randomIndex; // While there remain elements to shuffle...
+        temporaryValue,
+        randomIndex;
 
+      // While there remain elements to shuffle...
       while (0 !== currentIndex) {
         // Pick a remaining element...
         randomIndex = Math.floor(Math.random() * currentIndex);
-        currentIndex -= 1; // And swap it with the current element.
-
+        currentIndex -= 1;
+        // And swap it with the current element.
         temporaryValue = array[currentIndex];
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
       }
-
       return array;
     };
-
     const indexArray = Object.keys(this.array);
     const shuffledArray = shuffle(indexArray);
     shuffledArray.map((index, i) => {
@@ -267,7 +249,6 @@ class CrossRandom extends motorcortex.HTMLClip {
       this.addIncident(crossScale, 200 * i * (this.attrs.timing || 1));
     });
   }
-
 }
 
 class VerticalLinesMove extends motorcortex.HTMLClip {
@@ -277,11 +258,9 @@ class VerticalLinesMove extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     const crossList = [];
     this.array = [];
-
     for (let i = 0; i < 3; i++) {
       this.array.push(0);
       const width = Math.floor(Math.random() * this.attrs.maxLineWidth);
@@ -292,14 +271,12 @@ class VerticalLinesMove extends motorcortex.HTMLClip {
         </div>
       `);
     }
-
     return `
       <div class="wrapper">
         ${crossList.join("")}
       </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -320,7 +297,6 @@ class VerticalLinesMove extends motorcortex.HTMLClip {
       }
     `;
   }
-
   buildTree() {
     for (let i = 0; i <= 3; i++) {
       const lineTop = new motorcortex.CSSEffect({
@@ -348,7 +324,6 @@ class VerticalLinesMove extends motorcortex.HTMLClip {
       this.addIncident(lineHeigth, 500 + 500 * i + 1);
     }
   }
-
 }
 
 class HorizontalLinesMove extends motorcortex.HTMLClip {
@@ -358,11 +333,9 @@ class HorizontalLinesMove extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     const crossList = [];
     this.array = [];
-
     for (let i = 0; i < 3; i++) {
       const width1 = Math.floor(Math.random() * this.attrs.maxLineHeight);
       const width2 = Math.floor(Math.random() * this.attrs.width);
@@ -373,14 +346,12 @@ class HorizontalLinesMove extends motorcortex.HTMLClip {
         </div>
       `);
     }
-
     return `
       <div class="wrapper">
         ${crossList.join("")}
       </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -400,7 +371,6 @@ class HorizontalLinesMove extends motorcortex.HTMLClip {
       }
     `;
   }
-
   buildTree() {
     for (let i = 0; i <= 3; i++) {
       const lineTop = new motorcortex.CSSEffect({
@@ -428,7 +398,6 @@ class HorizontalLinesMove extends motorcortex.HTMLClip {
       this.addIncident(lineHeigth, 500 + 500 * i + 1);
     }
   }
-
 }
 
 class CircleExplosion extends motorcortex.HTMLClip {
@@ -438,28 +407,23 @@ class CircleExplosion extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     const crossList = [];
     this.array = [];
-
     for (let i = 0; i < this.attrs.items; i++) {
       const r = this.randomIntFromInterval(this.attrs.minR - 90, this.attrs.maxR - 90);
       crossList.push(`<div style="transform: rotate(${r}deg)" class="circle circle-item-${i}"></div>`);
     }
-
     return `
       <div class="wrapper">
         ${crossList.join("")}
       </div>
     `;
   }
-
   randomIntFromInterval(min, max) {
     // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
-
   get css() {
     return `
       .wrapper{
@@ -480,7 +444,6 @@ class CircleExplosion extends motorcortex.HTMLClip {
       }
   `;
   }
-
   buildTree() {
     for (let i = 0; i < this.attrs.items; i++) {
       const circleTop = new motorcortex.CSSEffect({
@@ -523,7 +486,6 @@ class CircleExplosion extends motorcortex.HTMLClip {
       this.addIncident(circleWidthDown, 250);
     }
   }
-
 }
 
 class CircleBubbleUp extends motorcortex.HTMLClip {
@@ -533,23 +495,19 @@ class CircleBubbleUp extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     const crossList = [];
     this.array = [];
-
     for (let i = 0; i < this.attrs.items; i++) {
       const r = this.randomIntFromInterval(this.attrs.maxCirlcleSize, this.attrs.width - this.attrs.maxCirlcleSize);
       crossList.push(`<div style="left: ${r}px" class="circle circle-item-${i}"></div>`);
     }
-
     return `
       <div class="wrapper">
         ${crossList.join("")}
       </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -570,12 +528,10 @@ class CircleBubbleUp extends motorcortex.HTMLClip {
       }
     `;
   }
-
   randomIntFromInterval(min, max) {
     // min and max included
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
-
   buildTree() {
     for (let i = 0; i < this.attrs.items; i++) {
       const duration = this.randomIntFromInterval(350, 500);
@@ -620,7 +576,6 @@ class CircleBubbleUp extends motorcortex.HTMLClip {
       this.addIncident(circleWidthDown, Math.round(duration / 2));
     }
   }
-
 }
 
 class Dots extends motorcortex.HTMLClip {
@@ -630,21 +585,17 @@ class Dots extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     const dotsList = [];
-
     for (let i = 0; i < this.attrs.items; i++) {
       dotsList.push(` <div class="dots dots-item-${i}"></div>`);
     }
-
     return `
       <div class="wrapper">
         ${dotsList.join("")}
   	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -667,7 +618,6 @@ class Dots extends motorcortex.HTMLClip {
       }
     `;
   }
-
   buildTree() {
     const dotsOpacity = new motorcortex.CSSEffect({
       animatedAttrs: {
@@ -683,7 +633,6 @@ class Dots extends motorcortex.HTMLClip {
     });
     this.addIncident(dotsOpacity, 0);
   }
-
 }
 
 class CrossRowReveal extends motorcortex.HTMLClip {
@@ -693,16 +642,13 @@ class CrossRowReveal extends motorcortex.HTMLClip {
       src: `https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,400;0,500;0,800;1,700;1,800;1,900&display=swap`
     }];
   }
-
   get html() {
     const crossList = [];
     this.array = [];
-
     for (let i = 0; i < this.attrs.items; i++) {
       this.array.push(0);
       crossList.push(` <div class="cross cross-item-${i}"></div>`);
     }
-
     return `
       <div class="wrapper">
         <div class= "cross-wrapper cross-wrapper-0">
@@ -714,7 +660,6 @@ class CrossRowReveal extends motorcortex.HTMLClip {
   	  </div>
     `;
   }
-
   get css() {
     return `
       .wrapper{
@@ -750,7 +695,6 @@ class CrossRowReveal extends motorcortex.HTMLClip {
       }
     `;
   }
-
   buildTree() {
     for (let i = 0; i < this.attrs.items; i++) {
       const select = this.attrs.reverse === true ? this.attrs.items - i - 1 : i;
@@ -768,7 +712,6 @@ class CrossRowReveal extends motorcortex.HTMLClip {
       });
       this.addIncident(reveal, 200 * i * (this.attrs.timing || 1));
     }
-
     const crossTop = new motorcortex.CSSEffect({
       animatedAttrs: {
         top: "0px"
@@ -780,7 +723,6 @@ class CrossRowReveal extends motorcortex.HTMLClip {
     });
     this.addIncident(crossTop, 200 * (this.attrs.timing || 1) * this.attrs.items);
   }
-
 }
 
 const CrossMoveRightValidation = {
@@ -1051,47 +993,56 @@ var index = {
   incidents: [{
     exportable: CrossMoveRight,
     name: "CrossMoveRight",
-    attributesValidationRules: { ...CrossMoveRightValidation
+    attributesValidationRules: {
+      ...CrossMoveRightValidation
     }
   }, {
     exportable: CrossMoveRightOutline,
     name: "CrossMoveRightOutline",
-    attributesValidationRules: { ...CrossMoveRightOutlineValidation
+    attributesValidationRules: {
+      ...CrossMoveRightOutlineValidation
     }
   }, {
     exportable: CrossRandom,
     name: "CrossRandom",
-    attributesValidationRules: { ...CrossRandomValidation
+    attributesValidationRules: {
+      ...CrossRandomValidation
     }
   }, {
     exportable: VerticalLinesMove,
     name: "VerticalLinesMove",
-    attributesValidationRules: { ...VerticalLinesMoveValidation
+    attributesValidationRules: {
+      ...VerticalLinesMoveValidation
     }
   }, {
     exportable: HorizontalLinesMove,
     name: "HorizontalLinesMove",
-    attributesValidationRules: { ...HorizontalLinesMoveValidation
+    attributesValidationRules: {
+      ...HorizontalLinesMoveValidation
     }
   }, {
     exportable: CircleExplosion,
     name: "CircleExplosion",
-    attributesValidationRules: { ...CircleExplosionValidation
+    attributesValidationRules: {
+      ...CircleExplosionValidation
     }
   }, {
     exportable: CircleBubbleUp,
     name: "CircleBubbleUp",
-    attributesValidationRules: { ...CircleBubbleUpValidation
+    attributesValidationRules: {
+      ...CircleBubbleUpValidation
     }
   }, {
     exportable: Dots,
     name: "Dots",
-    attributesValidationRules: { ...DotsValidation
+    attributesValidationRules: {
+      ...DotsValidation
     }
   }, {
     exportable: CrossRowReveal,
     name: "CrossRowReveal",
-    attributesValidationRules: { ...CrossRowRevealValidation
+    attributesValidationRules: {
+      ...CrossRowRevealValidation
     }
   }]
 };
