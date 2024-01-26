@@ -1,5 +1,30 @@
 # Changelog
 
+## 1.0.0 (2024-01-26)
+
+
+### Features
+
+* declare mc 8 as compatible ([3e9663c](https://github.com/donkeyclip/motorcortex-abstracts/commit/3e9663c580b02281fe6165af7084355b3c109b84))
+* declare mc 8 as compatible ([cc0a4df](https://github.com/donkeyclip/motorcortex-abstracts/commit/cc0a4dfc62199d9bcaa2200f0b3bfc3dc9b71338))
+* drop explorer 11 support ([e80ffd5](https://github.com/donkeyclip/motorcortex-abstracts/commit/e80ffd58c44351260fd868c2c3d7c10549980de3))
+* update compatibility with motorcortex ([889bdcc](https://github.com/donkeyclip/motorcortex-abstracts/commit/889bdcc11bed562e1c1c7bf4227882aaaec91aae))
+* use CSSEffect and remove anime ([1e7d373](https://github.com/donkeyclip/motorcortex-abstracts/commit/1e7d373157ad271f4093324d8c753e27d40868a3))
+
+
+### Bug Fixes
+
+* delete commitlint.config.js ([4022726](https://github.com/donkeyclip/motorcortex-abstracts/commit/4022726bd80aaa5cb7a530e4c3b0937d0277bb8a))
+* drop code from demo config ([31de04a](https://github.com/donkeyclip/motorcortex-abstracts/commit/31de04ab19bffcbef8ba2d8a1ed29d47ef55308a))
+* fix broken rollup config ([0dbc173](https://github.com/donkeyclip/motorcortex-abstracts/commit/0dbc1738ba7406d111c34970e84d6984a08abc6e))
+* fix broken rollup config ([a8c3835](https://github.com/donkeyclip/motorcortex-abstracts/commit/a8c383597e56e02a934eabe3c46a25d3cd2214c6))
+* fix broken webpack config ([c9f0ec3](https://github.com/donkeyclip/motorcortex-abstracts/commit/c9f0ec309062ecd7cd1bc4c51217225eabf460f6))
+* update build and demo files drop old babel config ([7e8f07d](https://github.com/donkeyclip/motorcortex-abstracts/commit/7e8f07d8c2004dbecf9799d0c4184a422137a8bd))
+* update build and demo files drop old babel config ([d4369b6](https://github.com/donkeyclip/motorcortex-abstracts/commit/d4369b62b9514cc62a8169621e34b30578efcb58))
+* update build and demo files drop old babel config ([8274469](https://github.com/donkeyclip/motorcortex-abstracts/commit/8274469e9de693ddae0b63144fe4df10be6f150d))
+* update build and demo files drop old babel config ([2fd6890](https://github.com/donkeyclip/motorcortex-abstracts/commit/2fd689086301b276b84760617381b22b50150f81))
+* update build and demo files drop old babel config ([83ae368](https://github.com/donkeyclip/motorcortex-abstracts/commit/83ae3683af0671e9320b574e51e0d7c50f81d898))
+
 ## [1.4.0](https://github.com/donkeyclip/motorcortex-abstracts/compare/v1.3.0...v1.4.0) (2022-04-07)
 
 

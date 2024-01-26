@@ -1,6 +1,6 @@
 {
   "name": "@donkeyclip/motorcortex-abstracts",
-  "version": "1.4.0",
+  "version": "1.0.0",
   "description": "Abstracts plugin for MotorCortex",
   "main": "dist/motorcortex-abstracts.cjs.js",
   "module": "dist/motorcortex-abstracts.esm.js",
