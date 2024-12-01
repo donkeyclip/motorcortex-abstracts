@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.4.1](https://github.com/donkeyclip/motorcortex-abstracts/compare/v1.4.0...v1.4.1) (2022-05-16)
+
+
+### Bug Fixes
+
+* delete commitlint.config.js ([4022726](https://github.com/donkeyclip/motorcortex-abstracts/commit/4022726bd80aaa5cb7a530e4c3b0937d0277bb8a))
+
 ## [1.4.0](https://github.com/donkeyclip/motorcortex-abstracts/compare/v1.3.0...v1.4.0) (2022-04-07)
 
 
